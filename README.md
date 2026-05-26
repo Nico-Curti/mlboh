@@ -67,7 +67,16 @@ You can use the `mlboh` library into your Python scripts or directly via command
 
 ### Command Line Interface
 
-**TODO**
+The `mlboh` package can be used directly via command line using the following syntax:
+
+```bash
+$ mlboh --help
+usage: mlboh [-h] [--version]
+
+options:
+  -h, --help     show this help message and exit
+  --version, -v  Get the current version installed
+```
 
 ## Testing
 
