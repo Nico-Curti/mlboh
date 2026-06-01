@@ -1,6 +1,6 @@
 | **Authors**  | **Project** |  **Documentation** | **Build Status** | **Code Quality** | **Coverage** |
 |:------------:|:-----------:|:------------------:|:----------------:|:----------------:|:------------:|
-| [**N. Curti**](https://github.com/Nico-Curti) <br/> S&C26 student | **mlboh** | **TODO** | **TODO** | **TODO** | **TODO** |
+| [**N. Curti**](https://github.com/Nico-Curti) <br/> S&C26 student | **mlboh** | [![mlboh docs CI](https://github.com/Nico-Curti/mlboh/actions/workflows/docs.yml/badge.svg)](https://github.com/Nico-Curti/mlboh/actions/workflows/docs.yml) | [![mlboh CI](https://github.com/Nico-Curti/mlboh/actions/workflows/python.yml/badge.svg)](https://github.com/Nico-Curti/mlboh/actions/workflows/python.yml) | [![Codacy Badge](https://app.codacy.com/project/badge/Grade/2fa4f86935e247069b6a95d5151fbc7f)](https://app.codacy.com/gh/Nico-Curti/mlboh/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade) | **TODO** |
 
 [![GitHub pull-requests](https://img.shields.io/github/issues-pr/Nico-Curti/mlboh.svg?style=plastic)](https://github.com/Nico-Curti/mlboh/pulls)
 [![GitHub issues](https://img.shields.io/github/issues/Nico-Curti/mlboh.svg?style=plastic)](https://github.com/Nico-Curti/mlboh/issues)
@@ -71,11 +71,19 @@ The `mlboh` package can be used directly via command line using the following sy
 
 ```bash
 $ mlboh --help
-usage: mlboh [-h] [--version]
+usage: mlboh [-h] [--version] --input INPUT [--parallel {threads,processes}] [--num-workers NUM_WORKERS]
 
 options:
-  -h, --help     show this help message and exit
-  --version, -v  Get the current version installed
+  -h, --help            show this help message and exit
+  --version, -v         Get the current version installed
+  --input INPUT, -i INPUT
+                        The input file from which to read the data. The file must be in CSV format with the column of
+                        labels identified by the name "Y"; all the other columns will be interpreted as input
+                        columns/features
+  --parallel {threads,processes}, -p {threads,processes}
+                        Parallelization scheme to use for the ML cross-validation
+  --num-workers NUM_WORKERS, -n NUM_WORKERS
+                        The number of worker threads/processes to use for parallel computation. Default is 4.
 ```
 
 ## Testing
