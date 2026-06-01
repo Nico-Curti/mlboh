@@ -33,7 +33,14 @@ templates_path = ['_templates']
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = ['_build', '**.ipynb_checkpoints']
 
+autodoc_default_options = {
+  "members": True,
+  "undoc-members": True,
+  "private-members": True,
+  "show-inheritance": True,
+}
 
+autodoc_typehints = "description"
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
