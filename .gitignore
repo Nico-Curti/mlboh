@@ -219,3 +219,7 @@ __marimo__/
 
 # Data folder
 data/
+
+# Documentation Sphinx useless folders
+docs/source/_static
+docs/source/_templates
