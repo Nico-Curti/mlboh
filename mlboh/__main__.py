@@ -5,6 +5,10 @@ import sys
 import argparse
 from time import time as now
 
+from sklearn.linear_model import LogisticRegression
+from sklearn.model_selection import StratifiedKFold
+from sklearn.metrics import accuracy_score
+
 from .__version__ import __version__
 from .mlboh import manual_parallel_cv_threads
 from .mlboh import manual_parallel_cv_processes
